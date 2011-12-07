@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-12-07 10:51+0000\n"
+"POT-Creation-Date: 2011-12-07 15:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,21 +37,17 @@ msgstr ""
 msgid "Please submit an email address."
 msgstr ""
 
-#: ./skins/captcha_contact_info/validate_site_feedback.vpy:36
-msgid "Wrong captcha code provided"
-msgstr ""
-
 #: ./skins/captcha_contact_info/validate_site_feedback.vpy:20
 msgid "You entered an invalid email address."
 msgstr ""
 
 #. Default: "Copy the words you see in the image below in the propert field. This step is needed for protect this form by spam and improper use."
-#: ./skins/captcha_contact_info/contact-info.cpt:161
+#: ./skins/captcha_contact_info/contact-info.cpt:164
 msgid "help_captcha"
 msgstr ""
 
 #. Default: "Spam protection"
-#: ./skins/captcha_contact_info/contact-info.cpt:153
+#: ./skins/captcha_contact_info/contact-info.cpt:156
 msgid "label_captcha"
 msgstr ""
 

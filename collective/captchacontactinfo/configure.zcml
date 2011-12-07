@@ -11,7 +11,7 @@
   <i18n:registerTranslations directory="locales" />
 
   <!-- File System Directory Views registration -->
-  <cmf:registerDirectory name="capthca_contact_info"/>
+  <cmf:registerDirectory name="captcha_contact_info"/>
 
   <genericsetup:registerProfile
       name="default"

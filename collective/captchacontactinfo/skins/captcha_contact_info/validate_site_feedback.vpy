@@ -33,7 +33,7 @@ if context.portal_membership.isAnonymousUser():
         context.plone_log('ERROR: seems that recaptcha is not configured')
         return state.set(status='failure')
     if not captcha_verify:
-        state.setError('recaptcha', _(u'Wrong captcha code provided'), 'email_required') # Ignored
+        state.setError('recaptcha', 'Wrong captcha code provided', 'email_required') # Ignored
 
 if state.getErrors():
     context.plone_utils.addPortalMessage(_(u'Please correct the indicated errors.'), 'error')
