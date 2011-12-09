@@ -1,6 +1,5 @@
 Introduction
 ============
-
 A simple Plone customization for the "*Contact form*" form that add a captcha regognition for anonymous users.
 
 When anonymous try to use contact-info form, they *must* provide also a captcha protection
@@ -35,3 +34,5 @@ This product was developed by RedTurtle Technology team.
 .. image:: http://www.redturtle.net/redturtle_banner.png
    :alt: RedTurtle Technology Site
    :target: http://www.redturtle.net/
+   
+   
