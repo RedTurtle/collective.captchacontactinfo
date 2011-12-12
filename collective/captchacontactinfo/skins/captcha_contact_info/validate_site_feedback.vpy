@@ -29,8 +29,9 @@ if context.portal_membership.isAnonymousUser():
     try:
         captcha_verify = context.restrictedTraverse('@@captcha').verify()
     except ValueError:
-        context.plone_utils.addPortalMessage(_(u"Can't send message. Please contact the site administrator"), 'error')
+        context.plone_utils.addPortalMessage(_(u"Captcha not configured"), 'error')
         context.plone_log('ERROR: seems that recaptcha is not configured')
+        state.setError('recaptcha', 'Captcha not configured', 'email_required') # Ignored
         return state.set(status='failure')
     if not captcha_verify:
         state.setError('recaptcha', 'Wrong captcha code provided', 'email_required') # Ignored
