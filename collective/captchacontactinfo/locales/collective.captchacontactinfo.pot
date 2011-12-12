@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-12-07 15:48+0000\n"
+"POT-Creation-Date: 2011-12-12 13:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,10 +18,10 @@ msgstr ""
 "Domain: collective.captchacontactinfo\n"
 
 #: ./skins/captcha_contact_info/validate_site_feedback.vpy:32
-msgid "Can't send message. Please contact the site administrator"
+msgid "Captcha not configured"
 msgstr ""
 
-#: ./skins/captcha_contact_info/validate_site_feedback.vpy:39
+#: ./skins/captcha_contact_info/validate_site_feedback.vpy:40
 msgid "Please correct the indicated errors."
 msgstr ""
 
