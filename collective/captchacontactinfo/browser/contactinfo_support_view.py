@@ -16,7 +16,7 @@ class View(BrowserView):
         """
         portal_properties = getToolByName(self.context, 'portal_properties')
         contactinfo_properties = getattr(portal_properties,
-                                         'captchacontactinfo_properties',
+                                         'contactinfo_properties',
                                          None)
         if not contactinfo_properties:
             return {}
