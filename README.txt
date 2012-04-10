@@ -13,6 +13,11 @@ The captcha protection is given by the `collective.recaptcha`__ product.
 __ http://pypi.python.org/pypi/collective.recaptcha
 
 
+Policy text
+===========
+
+To show a policy text in contact-form, you just need to write it into a page in the portal, and then set his path in a property in ZMI: portal_properties/captchacontactinfo_properties or in plone-control-panel.
+
 Dependencies
 ============
 

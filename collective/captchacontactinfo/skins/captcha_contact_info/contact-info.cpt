@@ -29,7 +29,8 @@
         </p>
 
     </div>
-    <div tal:condition="email_from_address">
+    <div tal:condition="email_from_address"
+         tal:define="contact_support_view nocall:context/@@contactinfo-support-view;">
 
         <p class="documentDescription"
            i18n:translate="description_contact_site_owner">
@@ -171,7 +172,16 @@
                        tal:on-error="structure string:&lt;strong&gt;CAPTCHA NOT CONFIGURED&lt;/strong&gt;"
                        />
         </div>
-		
+        <div class="policyInfo"
+             tal:define="policy_info contact_support_view/getPolicyText"
+             tal:condition="policy_info">
+          <p class="policyTitle" tal:condition="python:policy_info.get('title','')"
+              tal:content="policy_info/title" /> 
+          <div class="policyText">
+               <span tal:condition="python:policy_info.get('text','')"
+                     tal:replace="structure policy_info/text" />
+          </div>
+        </div>
         <div class="formControls">
 
             <input class="context"

@@ -1,7 +1,12 @@
 Changelog
 =========
 
+1.1.0 (2012-04-10)
+------------------
+
+- added customizable policy text [micecchi]
+
 1.0.0 (2011-12-09)
 ------------------
 
-- Initial release
+- Initial release [micecchi]

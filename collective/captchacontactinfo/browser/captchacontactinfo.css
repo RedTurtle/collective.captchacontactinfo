@@ -1,0 +1,11 @@
+.policyInfo div.policyText{
+    border: 0.1em solid #CCCCCC;
+    height: 12em;
+    margin: 1em 0;
+    overflow: auto;
+    padding-right: 1em;
+}
+
+.policyInfo p.policyTitle{
+    font-weight: bold;
+}

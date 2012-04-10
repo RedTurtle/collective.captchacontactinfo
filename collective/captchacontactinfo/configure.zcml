@@ -7,7 +7,8 @@
     i18n_domain="collective.captchacontactinfo">
 
   <include package="collective.recaptcha" />
-  
+  <include package=".browser" />
+    
   <i18n:registerTranslations directory="locales" />
 
   <!-- File System Directory Views registration -->
