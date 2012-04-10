@@ -18,13 +18,13 @@ from plone.app.controlpanel.form import ControlPanelForm
 class IContactInfoPolicyForm(Interface):
 
     policy_page = schema.TextLine(title=u"Policy page",
-                                description=u"Insert the path for the Page usced for Policy text. For example: folder-a/policy-page",
+                                description=u"Insert the path for the Page used for Policy text. For example: folder-a/policy-page",
                                 required=True)
 
 
 class ContactInfoPolicyControlPanelAdapter(object):
 
-    __sheet_id__ = 'captchacontactinfo_properties'
+    __sheet_id__ = 'contactinfo_properties'
 
     def __init__(self, context):
         super(ContactInfoPolicyControlPanelAdapter, self).__init__(context)
@@ -36,13 +36,17 @@ class ContactInfoPolicyControlPanelAdapter(object):
         Get the plone sheet containing the site properties
         '''
         pp = getToolByName(self.context, 'portal_properties')
-        return pp.get(self.__sheet_id__)
+        return getattr(pp, self.__sheet_id__, None)
 
     def get_policy_page(self):
+        if not self.sheet:
+            return ''
         value = self.sheet.getProperty('policy_page', '')
         return value
 
     def set_policy_page(self, value):
+        if not self.sheet:
+            return ''
         return self.sheet.manage_changeProperties(policy_page=value)
     policy_page = property(get_policy_page, set_policy_page)
 
@@ -50,7 +54,7 @@ class ContactInfoPolicyControlPanelAdapter(object):
 class ContactInfoPolicyControlPanel(ControlPanelForm):
 
     form_fields = form.FormFields(IContactInfoPolicyForm)
-    label = "Captcha Contact Info Cofig"
-    description = "This form is for managing news archive"
-    form_name = "News archive settings"
+    label = "Contact Info Config"
+    description = "This form is for managing Contact info settings"
+    form_name = "Contact info settings"
 
