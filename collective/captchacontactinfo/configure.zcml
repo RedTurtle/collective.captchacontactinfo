@@ -21,6 +21,11 @@
       description="Installs the collective.captchacontactinfo package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-  <!-- -*- extra stuff goes here -*- -->
   
+  <genericsetup:importStep
+      name="collective.captchacontactinfo"
+      title="Captcha contact-info configurazion"
+      description="Configures contact-info properties"
+      handler="collective.captchacontactinfo.exportimport.import_various"
+      />
 </configure>
