@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-12-12 13:09+0000\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,9 +17,21 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.captchacontactinfo\n"
 
+#: ./profiles/default/controlpanel.xml
+msgid "Captcha Contact Info"
+msgstr ""
+
 #: ./skins/captcha_contact_info/validate_site_feedback.vpy:32
 msgid "Captcha not configured"
 msgstr "Captcha non configurato"
+
+#: ./browser/configlet.py:50
+msgid "Contact-info Configuration"
+msgstr "Configurazione contact-info"
+
+#: ./browser/configlet.py:52
+msgid "Contact-info settings"
+msgstr "Impostazioni contact-info"
 
 #: ./skins/captcha_contact_info/validate_site_feedback.vpy:40
 msgid "Please correct the indicated errors."
@@ -41,13 +53,23 @@ msgstr ""
 msgid "You entered an invalid email address."
 msgstr ""
 
+#. Default: "Policy page"
+#: ./browser/configlet.py:11
+msgid "contactinfo-config-policy"
+msgstr "Pagina con le policy"
+
+#. Default: "Insert the path for the Page used for Policy text. For example: folder-a/policy-page"
+#: ./browser/configlet.py:13
+msgid "contactinfo-config-policyhelp"
+msgstr "Inserisci il percorso della pagina usata per il testo di policy. Per esempio: folder-a/policy-page"
+
 #. Default: "Copy the words you see in the image below in the propert field. This step is needed for protect this form by spam and improper use."
-#: ./skins/captcha_contact_info/contact-info.cpt:164
+#: ./skins/captcha_contact_info/contact-info.cpt:165
 msgid "help_captcha"
 msgstr "Copia le parole che vedi nell'immagine sottostante nell'apposito campo. Questo passo è richiesto per proteggere il modulo da abusi e messaggi di spam."
 
 #. Default: "Spam protection"
-#: ./skins/captcha_contact_info/contact-info.cpt:156
+#: ./skins/captcha_contact_info/contact-info.cpt:157
 msgid "label_captcha"
 msgstr "Protezione anti-spam"
 

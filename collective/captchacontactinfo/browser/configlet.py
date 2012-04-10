@@ -1,24 +1,17 @@
 from zope.interface import Interface
-from zope.component import adapts
-from zope.interface import implements
 from zope import schema
-from zope.app.form import CustomWidgetFactory
-from zope.app.form.browser import ObjectWidget
-from zope.app.form.browser import ListSequenceWidget
 from zope.formlib import form
-
 from Products.CMFCore.utils import getToolByName
-from Products.CMFDefault.formlib.schema import SchemaAdapterBase
-
-from Products.CMFPlone.interfaces import IPloneSiteRoot
-
 from plone.app.controlpanel.form import ControlPanelForm
+from collective.captchacontactinfo import captchacontactinfoMessageFactory as _
 
 
 class IContactInfoPolicyForm(Interface):
 
-    policy_page = schema.TextLine(title=u"Policy page",
-                                description=u"Insert the path for the Page used for Policy text. For example: folder-a/policy-page",
+    policy_page = schema.TextLine(title=_("contactinfo-config-policy",
+                                          default=u"Policy page"),
+                                description=_("contactinfo-config-policyhelp",
+                                              default=u"Insert the path for the Page used for Policy text. For example: folder-a/policy-page"),
                                 required=True)
 
 
@@ -54,7 +47,7 @@ class ContactInfoPolicyControlPanelAdapter(object):
 class ContactInfoPolicyControlPanel(ControlPanelForm):
 
     form_fields = form.FormFields(IContactInfoPolicyForm)
-    label = "Contact Info Config"
-    description = "This form is for managing Contact info settings"
-    form_name = "Contact info settings"
+    label = _(u"Contact-info Configuration")
+    description = _(u"")
+    form_name = _("Contact-info settings")
 
