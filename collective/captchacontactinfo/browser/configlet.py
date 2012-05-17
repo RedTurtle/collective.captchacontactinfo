@@ -20,7 +20,7 @@ class ContactInfoPolicyControlPanelAdapter(object):
     __sheet_id__ = 'contactinfo_properties'
 
     def __init__(self, context):
-        super(ContactInfoPolicyControlPanelAdapter, self).__init__(context)
+        super(ContactInfoPolicyControlPanelAdapter, self).__init__()
         self.context = context
         self.sheet = self.getSheet()
 

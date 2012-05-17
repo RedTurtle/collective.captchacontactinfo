@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.1.0'
+version = '1.2.0'
 
 setup(name='collective.captchacontactinfo',
       version=version,
@@ -14,7 +14,10 @@ setup(name='collective.captchacontactinfo',
         "Programming Language :: Python",
         "Framework :: Plone",
         "Framework :: Plone :: 3.3",
+        "Framework :: Plone :: 4.0",
+        "Framework :: Plone :: 4.2",
         "Development Status :: 5 - Production/Stable",
+        "License :: OSI Approved :: GNU General Public License (GPL)",
         ],
       keywords='plone captcha e-mail contact-info',
       author='RedTurtle Technology',

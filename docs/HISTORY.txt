@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.2.0 (unreleased)
+------------------
+
+- Plone 4 compatibility [micecchi]
+
 1.1.0 (2012-04-10)
 ------------------
 
