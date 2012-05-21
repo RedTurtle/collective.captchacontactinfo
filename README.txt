@@ -18,6 +18,7 @@ Policy text
 ===========
 
 To show a policy text in contact-form, you just need to write it into a page in the portal, and then set his path in a property in ZMI: portal_properties/captchacontactinfo_properties or in plone-control-panel: http://path/to/site/@@contact-info-controlpanel
+The title of the page will be shown in the form before the text.
 
 Dependencies
 ============
