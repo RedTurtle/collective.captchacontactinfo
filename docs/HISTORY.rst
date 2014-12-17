@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.2.1 (unreleased)
+1.2.1 (2014-12-17)
 ------------------
 
 - German translation added.
