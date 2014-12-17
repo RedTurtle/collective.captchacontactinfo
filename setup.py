@@ -6,8 +6,8 @@ version = '1.2.1.dev0'
 setup(name='collective.captchacontactinfo',
       version=version,
       description="A simple customization for Plone contact-info that add recaptcha for anonymous users",
-      long_description=open("README.txt").read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
+      long_description=open("README.rst").read() + "\n" +
+                       open(os.path.join("docs", "HISTORY.rst")).read(),
       # Get more strings from
       # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
@@ -15,7 +15,9 @@ setup(name='collective.captchacontactinfo',
         "Framework :: Plone",
         "Framework :: Plone :: 3.3",
         "Framework :: Plone :: 4.0",
+        "Framework :: Plone :: 4.1",
         "Framework :: Plone :: 4.2",
+        "Framework :: Plone :: 4.3",
         "Development Status :: 5 - Production/Stable",
         "License :: OSI Approved :: GNU General Public License (GPL)",
         ],
