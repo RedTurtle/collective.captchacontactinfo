@@ -4,14 +4,13 @@ Changelog
 1.2.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Property sheet will not created twice on reinstall
+  [keul] 
 
 1.2.1 (2014-12-17)
 ------------------
 
 - German translation added.
-
 
 1.2.0 (2012-08-02)
 ------------------
