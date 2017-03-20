@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.captchacontactinfo">
+
+    <browser:page
+        name="contact-info-controlpanel"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        class=".view.CollectiveCaptchaSettingsControlPanel"
+        permission="cmf.ManagePortal"
+        layer="collective.captchacontactinfo.interfaces.ICollectiveCaptchaContactInfoLayer"
+        />
+
+</configure>

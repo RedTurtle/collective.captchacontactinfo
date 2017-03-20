@@ -8,11 +8,11 @@
 
   <include package="collective.recaptcha" />
   <include package=".browser" />
-    
+  <include package=".controlpanel" />
+
+
   <i18n:registerTranslations directory="locales" />
 
-  <!-- File System Directory Views registration -->
-  <cmf:registerDirectory name="captcha_contact_info"/>
 
   <genericsetup:registerProfile
       name="default"
@@ -21,11 +21,21 @@
       description="Installs the collective.captchacontactinfo package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-  
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="Captcha contact-info"
+      directory="profiles/uninstall"
+      description="Uninstalls the collective.captchacontactinfo package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:importStep
       name="collective.captchacontactinfo"
-      title="Captcha contact-info configurazion"
+      title="Captcha contact-info configuration"
       description="Configures contact-info properties"
-      handler="collective.captchacontactinfo.exportimport.import_various"
+      handler="collective.captchacontactinfo.setuphandlers.post_install"
       />
+
+
 </configure>

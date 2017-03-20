@@ -33,6 +33,7 @@ setup(name='collective.captchacontactinfo',
       install_requires=[
           'setuptools',
           'collective.recaptcha',
+	  'plone.formwidget.recaptcha',
       ],
       entry_points="""
       # -*- Entry points: -*-

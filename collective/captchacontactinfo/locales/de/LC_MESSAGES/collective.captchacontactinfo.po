@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"POT-Creation-Date: 2017-03-16 16:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Eggert Ehmke <eggert@eehmke.de>\n"
 "Language-Team: LANGUAGE <DE@de.org>\n"
@@ -21,60 +21,49 @@ msgstr ""
 msgid "Captcha Contact Info"
 msgstr ""
 
-#: ./skins/captcha_contact_info/validate_site_feedback.vpy:32
-msgid "Captcha not configured"
-msgstr "Captcha nicht eingerichtet"
+#: ./configure.zcml:36
+msgid "Captcha contact-info"
+msgstr ""
 
-#: ./browser/configlet.py:50
-msgid "Contact-info Configuration"
-msgstr "Contact-Info einrichten"
+#: ./configure.zcml:36
+msgid "Installs the collective.captchacontactinfo package"
+msgstr ""
 
-#: ./browser/configlet.py:52
-msgid "Contact-info settings"
-msgstr "Contact-Info Einstellungen"
-
-#: ./skins/captcha_contact_info/validate_site_feedback.vpy:40
-msgid "Please correct the indicated errors."
-msgstr "Bitte korrigieren Sie die angezeigten Fehler"
-
-#: ./skins/captcha_contact_info/validate_site_feedback.vpy:26
-msgid "Please enter a message"
-msgstr "Bitte eine Nachricht eingeben"
-
-#: ./skins/captcha_contact_info/validate_site_feedback.vpy:23
-msgid "Please enter a subject."
-msgstr "Bitte einen Betreff eingeben"
-
-#: ./skins/captcha_contact_info/validate_site_feedback.vpy:15
-msgid "Please submit an email address."
-msgstr "Bitte geben Sie eine E-Mail Adresse ein"
-
-#: ./skins/captcha_contact_info/validate_site_feedback.vpy:20
-msgid "You entered an invalid email address."
-msgstr "Sie haben eine ungültige E-Mail Adresse eingegeben"
+#: ./configure.zcml:44
+msgid "Uninstalls the collective.captchacontactinfo package"
+msgstr ""
 
 #. Default: "Policy page"
-#: ./browser/configlet.py:11
+#: ./controlpanel/interfaces.py:11
 msgid "contactinfo-config-policy"
 msgstr "Erklärung"
 
 #. Default: "Insert the path for the Page used for Policy text. For example: folder-a/policy-page"
-#: ./browser/configlet.py:13
+#: ./controlpanel/interfaces.py:13
 msgid "contactinfo-config-policyhelp"
 msgstr "Geben Sie den Pfad zu Ihrer Erklärung ein. Zum Beispiel: ordner/policy-page"
 
-#. Default: "Copy the words you see in the image below in the propert field. This step is needed for protect this form by spam and improper use."
-#: ./skins/captcha_contact_info/contact-info.cpt:167
-msgid "help_captcha"
-msgstr "Kopieren Sie beide Wörter aus dem Bild in das Eingabefeld. Diese Schritt ist nötig um dieses Formular vor Spam und Missbrauch zu schützen."
+#. Default: "Fill in this form to contact the site owners."
+#: ./browser/templates/contact-info.pt:40
+msgid "description_contact_site_owner"
+msgstr ""
 
-#. Default: "Please enter the subject of the message you want to send."
-#: ./skins/captcha_contact_info/contact-info.cpt:117
-msgid "help_subject"
-msgstr "Bitte geben Sie den Betreff der Nachricht ein"
+#. Default: "Thank you for your feedback"
+#: ./browser/templates/contact-info.pt:50
+msgid "description_contact_site_owner_success"
+msgstr ""
 
-#. Default: "Spam protection"
-#: ./skins/captcha_contact_info/contact-info.cpt:159
-msgid "label_captcha"
-msgstr "Spamschutz"
+#. Default: "Contact form"
+#: ./browser/templates/contact-info.pt:26
+msgid "heading_contact_form"
+msgstr ""
 
+#. Default: "Send"
+#: ./browser/contact_form_view.py:56
+msgid "label_send"
+msgstr ""
+
+#. Default: "This site doesn't have a valid email setup, so you cannot use any contact forms."
+#: ./browser/templates/contact-info.pt:32
+msgid "text_no_email_setup"
+msgstr ""

@@ -4,31 +4,20 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="collective.captchacontactinfo">
 
-    <!-- CONFIGLET FOR ARCHIVES -->
-    <adapter
-        provides=".configlet.IContactInfoPolicyForm"
-        for="Products.CMFCore.interfaces.ISiteRoot"
-        factory=".configlet.ContactInfoPolicyControlPanelAdapter"
-    /> 
+
     <browser:page
-          name="contact-info-controlpanel"
-          for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-          class=".configlet.ContactInfoPolicyControlPanel"
-          permission="cmf.ManagePortal"
-          />
- 
-    <browser:page
-          name="contactinfo-support-view"
-          for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-          class=".contactinfo_support_view.View"
-          permission="zope2.View"
-          allowed_interface=".interfaces.IContactinfoSupportView"
+          name="contact-info"
+          for="*"
+          class=".contact_form_view.ContactInfoPolicy"
+          permission="zope.Public"
+          layer="collective.captchacontactinfo.interfaces.ICollectiveCaptchaContactInfoLayer"
           />
 
-    <!-- Resource directory for images -->
-    <browser:resource
-      name="captchacontactinfo.css"
-      file="captchacontactinfo.css"
-      />
+
+      <!-- Publish static files -->
+    <browser:resourceDirectory
+        name="collective.captchacontactinfo"
+        directory="static"
+        />
 
 </configure>
