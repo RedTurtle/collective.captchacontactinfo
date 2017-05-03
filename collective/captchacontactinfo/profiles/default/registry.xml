@@ -1,6 +1,5 @@
 <registry>
     <records interface="collective.captchacontactinfo.controlpanel.interfaces.ICollectiveCaptchaContactInfoSettings" >
-      <value key="policy_page"></value>
     </records>
     <records prefix="plone.resources/captchapolicy"
             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
