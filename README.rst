@@ -27,7 +27,10 @@ The title of the page will be shown in the form before the text.
 Dependencies
 ============
 
-This product has been tested on Plone 3.3.5, Plone 4.2 and 4.3.
+From version 2.0.0 this product is compatible only for Plone 5.
+
+1.x.x versions still works on Plone 3.3.5 and Plone 4.
+
 
 Credits
 =======
