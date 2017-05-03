@@ -4,6 +4,7 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="collective.captchacontactinfo">
 
+    <include package=".ajax" />
 
     <browser:page
           name="contact-info"

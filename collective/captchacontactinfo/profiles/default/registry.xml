@@ -5,14 +5,18 @@
     <records prefix="plone.resources/captchapolicy"
             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
       <value key="js">++resource++collective.captchacontactinfo/scripts/policy_ajax.js</value>
+      <value key="css">++resource++collective.captchacontactinfo/css/captchacontactinfo.css</value>
     </records>
+
     <records prefix="plone.bundles/captchapolicy"
             interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+      <value key="merge_with">default</value>
       <value key="resources">
         <element>captchapolicy</element>
       </value>
       <value key="enabled">True</value>
       <value key="compile">True</value>
       <value key="jscompilation">++resource++collective.captchacontactinfo/scripts/policy_ajax.js</value>
+      <value key="csscompilation">++resource++collective.captchacontactinfo/css/captchacontactinfo.css</value>
     </records>
 </registry>

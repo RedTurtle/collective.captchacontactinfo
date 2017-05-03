@@ -1,11 +1,35 @@
-$(document).ready(function() {
-    $('<div class="policyInfo policyTitle" id="policyTitle">Policy</div> <div class="policyInfo policyText" id="policyText"> </div>').insertAfter($('#formfield-form-widgets-message')[0])
-        $.ajax({
-            url : "/Plone/policy",
-            dataType: "text",
-            success : function (data) {
-                $(".policyInfo.policyText").html($(data).find('#parent-fieldname-text').html());
-            }
-        });
+require([
+  'jquery',
+  'mockup-patterns-modal',
+], function($, Modal) {
+  'use strict';
+   $(document).ready(function(){
+     var myvet = $(location.pathname.split("/"))
+     var mylocation = $(location.pathname.split("/"))[myvet.length-1]
 
-});
+     if (mylocation === 'contact-info'){
+       render_policy()
+     }
+     else{
+       $('section ul li a[href$="contact-info"]').each(function() {
+          var modal = new Modal($(this), {
+          });
+          modal.on('after-render', function(){
+           render_policy()
+          });
+        });
+     }
+   });
+ });
+
+
+function render_policy(){
+  $('<div class="policyInfo policyTitle" id="policyTitle">Policy</div> <div class="policyInfo policyText" id="policyText"> </div>').insertAfter($('#formfield-form-widgets-message')[0])
+  $.ajax({
+      url: '/Plone/get_policy_page_url',
+      dataType: "text",
+      success : function (data) {
+          $(".policyInfo.policyText").html($(data));
+      }
+  });
+}
