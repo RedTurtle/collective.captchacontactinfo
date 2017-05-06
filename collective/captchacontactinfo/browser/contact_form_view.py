@@ -38,7 +38,7 @@ class ReCaptcha(object):
         self.context = context
 
 
-class ContactInfoPolicy(AutoExtensibleForm, ContactForm):
+class ContactInfoPolicy(ContactForm):
 
     template = ViewPageTemplateFile('templates/contact-info.pt')
     schema = IContactForm

@@ -11,7 +11,7 @@ require([
        render_policy()
      }
      else{
-       $('section ul li a[href$="contact-info"]').each(function() {
+       $('ul li a[href$="contact-info"]').each(function() {
           var modal = new Modal($(this), {
           });
           modal.on('after-render', function(){
