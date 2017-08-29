@@ -6,7 +6,6 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="collective.captchacontactinfo">
 
-  <include package="collective.recaptcha" />
   <include package=".browser" />
   <include package=".controlpanel" />
 
