@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0.0 (unreleased)
+2.0.0 (2017-09-13)
 ------------------
 
 - Property sheet will not created twice on reinstall
