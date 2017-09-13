@@ -1,11 +1,13 @@
 Changelog
 =========
 
-1.2.2 (unreleased)
+2.0.0 (unreleased)
 ------------------
 
 - Property sheet will not created twice on reinstall
   [keul] 
+- Plone 5 compatibility. For Plone 4, use 1.x.x branch
+  [daniele-andreotti]
 
 1.2.1 (2014-12-17)
 ------------------
