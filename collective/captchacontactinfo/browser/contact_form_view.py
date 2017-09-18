@@ -70,7 +70,7 @@ class ContactInfoPolicy(ContactForm):
         )
 
         if captcha.verify():
-            IStatusMessage(self.request).add(u'ReCaptcha validation passed.')
+            IStatusMessage(self.request).add(_(u'ReCaptcha validation passed.'))
 
         else:
             IStatusMessage(self.request).add(

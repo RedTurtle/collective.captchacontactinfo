@@ -25,12 +25,14 @@ require([
 
 function render_policy(){
   portal_url = $('body').data('portalUrl')
-  $('<div class="policyInfo policyTitle" id="policyTitle">Policy</div> <div class="policyInfo policyText" id="policyText"> </div>').insertAfter($('#formfield-form-widgets-message')[0])
   $.ajax({
       url: portal_url + '/get_policy_page_url',
       dataType: "text",
       success : function (data) {
-          $(".policyInfo.policyText").html($(data));
+          if(data){
+            $('<div class="policyInfo policyTitle" id="policyTitle">Informativa privacy</div> <div class="policyInfo policyText" id="policyText"> </div>').insertAfter($('#formfield-form-widgets-message')[0])
+            $(".policyInfo.policyText").html($(data));
+          }
       }
   });
 }

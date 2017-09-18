@@ -1,7 +1,5 @@
 <registry>
     <records interface="collective.captchacontactinfo.controlpanel.interfaces.ICollectiveCaptchaContactInfoSettings" />
-    <!-- collective.recaptcha doesn't registry its fields -->
-    <records interface="collective.recaptcha.settings.IRecaptchaSettings" />
     <records prefix="plone.resources/captchapolicy"
             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
       <value key="js">++resource++collective.captchacontactinfo/scripts/policy_ajax.js</value>

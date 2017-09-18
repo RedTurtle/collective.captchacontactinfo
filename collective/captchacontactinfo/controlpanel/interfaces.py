@@ -12,4 +12,4 @@ class ICollectiveCaptchaContactInfoSettings(Interface):
                                           default=u"Policy page"),
                                 description=_("contactinfo-config-policyhelp",
                                               default=u"Insert the path for the Page used for Policy text. For example: folder-a/policy-page"),
-                                required=True)
+                                required=False)

@@ -18,4 +18,9 @@ class View(BrowserView):
             return ''
 
         policy_obj = api.content.get(path=str(policy_path))
+        if not policy_obj:
+            return ''
+
+        if not getattr(policy_obj, 'text', None):
+            return ''
         return policy_obj.text.output
