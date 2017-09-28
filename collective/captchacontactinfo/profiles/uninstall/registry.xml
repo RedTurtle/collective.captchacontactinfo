@@ -1,0 +1,13 @@
+<registry>
+    <records interface="collective.captchacontactinfo.controlpanel.interfaces.ICollectiveCaptchaContactInfoSettings"
+             remove="true"/>
+    <records prefix="plone.resources/captchapolicy"
+            interface='Products.CMFPlone.interfaces.IResourceRegistry'
+            remove="true">
+    </records>
+
+    <records prefix="plone.bundles/captchapolicy"
+            interface='Products.CMFPlone.interfaces.IBundleRegistry'
+            remove="true">
+    </records>
+</registry>
