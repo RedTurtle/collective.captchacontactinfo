@@ -4,14 +4,15 @@ Changelog
 2.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix uninstall-step (remove resource registries)
+  [cekk]
 
 
 2.0.0 (2017-09-13)
 ------------------
 
 - Property sheet will not created twice on reinstall
-  [keul] 
+  [keul]
 - Plone 5 compatibility. For Plone 4, use 1.x.x branch
   [daniele-andreotti]
 
