@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0.1 (unreleased)
+2.0.1 (2017-10-26)
 ------------------
 
 - Fix uninstall-step (remove resource registries)
