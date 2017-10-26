@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0.2 (unreleased)
+2.0.2 (2017-10-26)
 ------------------
 
 - Fixed modal display. [daniele]
