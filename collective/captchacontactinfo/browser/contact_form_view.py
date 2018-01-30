@@ -4,12 +4,11 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope import schema
 
 from Products.CMFPlone import PloneMessageFactory as _
+from collective.captchacontactinfo import captchacontactinfoMessageFactory as _C
 from Products.CMFPlone.browser.interfaces import IContactForm
 
 import logging
 import z3c.form.field
-from plone.autoform.form import AutoExtensibleForm
-
 from Acquisition import aq_inner
 from plone.formwidget.recaptcha.widget import ReCaptchaFieldWidget
 from z3c.form import button
@@ -51,6 +50,14 @@ class ContactInfoPolicy(ContactForm):
         fields = field.Fields(IReCaptchaForm)
         fields['captcha'].widgetFactory = ReCaptchaFieldWidget
         fields_objects = z3c.form.field.Fields(fields)
+        self.fields['sender_fullname'].field.required = False
+        self.fields['sender_from_address'].field.required = False
+        help_message = _C(
+            u'help_sender_from_address_customized',
+            default=u'Please enter your e-mail address if '
+            'you want to receive an answer')
+        self.fields['sender_from_address'].field.description = self.context.\
+            translate(help_message)
         self.fields += fields_objects
 
     @button.buttonAndHandler(_(u'label_send', default='Send'), name='send')
@@ -75,7 +82,8 @@ class ContactInfoPolicy(ContactForm):
         else:
             IStatusMessage(self.request).add(
                 self.formErrorsMessage,
-                type=u'The code you entered was wrong, please enter the new one.'
+                type=u'The code you entered was wrong, '
+                     'please enter the new one.'
             )
             return
 
