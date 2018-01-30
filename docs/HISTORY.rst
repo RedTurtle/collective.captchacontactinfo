@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0.3 (unreleased)
+2.0.3 (2018-01-30)
 ------------------
 
 - fix contact form: for privacy reason remove obligatoriness
