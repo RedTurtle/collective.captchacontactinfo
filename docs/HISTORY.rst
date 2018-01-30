@@ -4,7 +4,10 @@ Changelog
 2.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- fix contact form: for privacy reason remove obligatoriness
+  for sender name and sender email address; 
+  update message accordingly with previous topic
+  [lucabel]
 
 
 2.0.2 (2017-10-26)

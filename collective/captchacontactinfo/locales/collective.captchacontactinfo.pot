@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-09-18 15:24+0000\n"
+"POT-Creation-Date: 2018-01-30 11:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,20 +21,8 @@ msgstr ""
 msgid "Captcha Contact Info"
 msgstr ""
 
-#: ./configure.zcml:21
-msgid "Captcha contact-info"
-msgstr ""
-
-#: ./configure.zcml:21
-msgid "Installs the collective.captchacontactinfo package"
-msgstr ""
-
-#: ./browser/contact_form_view.py:73
+#: ./browser/contact_form_view.py:77
 msgid "ReCaptcha validation passed."
-msgstr ""
-
-#: ./configure.zcml:29
-msgid "Uninstalls the collective.captchacontactinfo package"
 msgstr ""
 
 #. Default: "Policy page"
@@ -62,8 +50,13 @@ msgstr ""
 msgid "heading_contact_form"
 msgstr ""
 
+#. Default: "Please enter your e-mail address if you want to receive an answer"
+#: ./browser/contact_form_view.py:55
+msgid "help_sender_from_address_customized"
+msgstr ""
+
 #. Default: "Send"
-#: ./browser/contact_form_view.py:56
+#: ./browser/contact_form_view.py:60
 msgid "label_send"
 msgstr ""
 
@@ -71,3 +64,4 @@ msgstr ""
 #: ./browser/templates/contact-info.pt:28
 msgid "text_no_email_setup"
 msgstr ""
+
