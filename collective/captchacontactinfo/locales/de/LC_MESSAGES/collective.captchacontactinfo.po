@@ -21,6 +21,10 @@ msgstr ""
 msgid "Captcha Contact Info"
 msgstr ""
 
+#: ./configure.zcml:23
+msgid "Captcha contact-info"
+msgstr ""
+
 #: ./skins/captcha_contact_info/validate_site_feedback.vpy:32
 msgid "Captcha not configured"
 msgstr "Captcha nicht eingerichtet"
@@ -32,6 +36,10 @@ msgstr "Contact-Info einrichten"
 #: ./browser/configlet.py:52
 msgid "Contact-info settings"
 msgstr "Contact-Info Einstellungen"
+
+#: ./configure.zcml:23
+msgid "Installs the collective.captchacontactinfo package"
+msgstr ""
 
 #: ./skins/captcha_contact_info/validate_site_feedback.vpy:40
 msgid "Please correct the indicated errors."
@@ -77,4 +85,3 @@ msgstr "Bitte geben Sie den Betreff der Nachricht ein"
 #: ./skins/captcha_contact_info/contact-info.cpt:159
 msgid "label_captcha"
 msgstr "Spamschutz"
-

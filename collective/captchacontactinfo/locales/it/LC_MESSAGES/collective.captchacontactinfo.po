@@ -21,6 +21,10 @@ msgstr ""
 msgid "Captcha Contact Info"
 msgstr ""
 
+#: ./configure.zcml:23
+msgid "Captcha contact-info"
+msgstr ""
+
 #: ./skins/captcha_contact_info/validate_site_feedback.vpy:32
 msgid "Captcha not configured"
 msgstr "Captcha non configurato"
@@ -32,6 +36,10 @@ msgstr "Configurazione contact-info"
 #: ./browser/configlet.py:52
 msgid "Contact-info settings"
 msgstr "Impostazioni contact-info"
+
+#: ./configure.zcml:23
+msgid "Installs the collective.captchacontactinfo package"
+msgstr ""
 
 #: ./skins/captcha_contact_info/validate_site_feedback.vpy:40
 msgid "Please correct the indicated errors."
@@ -64,17 +72,16 @@ msgid "contactinfo-config-policyhelp"
 msgstr "Inserisci il percorso della pagina usata per il testo di policy. Per esempio: folder-a/policy-page"
 
 #. Default: "Copy the words you see in the image below in the propert field. This step is needed for protect this form by spam and improper use."
-#: ./skins/captcha_contact_info/contact-info.cpt:170
+#: ./skins/captcha_contact_info/contact-info.cpt:167
 msgid "help_captcha"
 msgstr "Copia le parole che vedi nell'immagine sottostante nell'apposito campo. Questo passo è richiesto per proteggere il modulo da abusi e messaggi di spam."
 
 #. Default: "Please enter the subject of the message you want to send."
-#: ./skins/captcha_contact_info/contact-info.cpt:120
+#: ./skins/captcha_contact_info/contact-info.cpt:117
 msgid "help_subject"
 msgstr "Inserisci l'oggetto del messaggio che intendi spedire"
 
 #. Default: "Spam protection"
-#: ./skins/captcha_contact_info/contact-info.cpt:162
+#: ./skins/captcha_contact_info/contact-info.cpt:159
 msgid "label_captcha"
 msgstr "Protezione anti-spam"
-
