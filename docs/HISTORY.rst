@@ -4,6 +4,16 @@ Changelog
 1.2.2 (unreleased)
 ------------------
 
+- Allow to use a browser view instead of a Plone content
+  This is useful in multilingual website or for other special cases
+  [laulaz]
+
+- Add French translations
+  [laulaz]
+
+- Add basic buildout
+  [laulaz]
+
 - Property sheet will not created twice on reinstall
   [keul] 
 
