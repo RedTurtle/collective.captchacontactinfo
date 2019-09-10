@@ -2,6 +2,7 @@ from Products.Five.browser import BrowserView
 from Products.CMFCore.utils import getToolByName
 from collective.captchacontactinfo.browser.interfaces import IContactinfoSupportView
 from zope.interface import implements
+from zope.publisher.interfaces.browser import IBrowserView
 
 
 class View(BrowserView):
@@ -29,7 +30,10 @@ class View(BrowserView):
             except:
                 return {}
         portal_path = "/".join(self.context.portal_url.getPortalObject().getPhysicalPath())
-        page_policy = self.context.restrictedTraverse("%s/%s" % (portal_path, page_policy_path), None)
+        path = "%s/%s" % (portal_path, page_policy_path)
+        page_policy = self.context.restrictedTraverse(path, None)
         if not page_policy:
             return {}
+        if IBrowserView.providedBy(page_policy):
+            return {'url': path}
         return {'title': page_policy.Title(), 'text': page_policy.getText()}

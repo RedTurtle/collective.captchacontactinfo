@@ -177,12 +177,21 @@
         <div class="policyInfo"
              tal:define="policy_info contact_support_view/getPolicyText"
              tal:condition="policy_info">
-          <p class="policyTitle" tal:condition="python:policy_info.get('title','')"
-              tal:content="policy_info/title" /> 
-          <div class="policyText">
-               <span tal:condition="python:policy_info.get('text','')"
-                     tal:replace="structure policy_info/text" />
-          </div>
+          <tal:view tal:condition="policy_info/url | nothing">
+            <a href="" tal:attributes="href policy_info/url | nothing"
+               i18n:domain="collective.captchacontactinfo"
+               i18n:translate="policy_link">
+                Click here to read our Privacy Policy related to the use of your personal data.
+            </a>
+          </tal:view>
+          <tal:page tal:condition="not: policy_info/url | nothing">
+            <p class="policyTitle" tal:condition="python:policy_info.get('title','')"
+                tal:content="policy_info/title" /> 
+            <div class="policyText">
+                 <span tal:condition="python:policy_info.get('text','')"
+                       tal:replace="structure policy_info/text" />
+            </div>
+          </tal:page>
         </div>
         <div class="formControls">
 

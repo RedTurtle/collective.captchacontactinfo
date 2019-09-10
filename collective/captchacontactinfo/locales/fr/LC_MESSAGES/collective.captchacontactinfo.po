@@ -83,3 +83,8 @@ msgstr "Veuillez saisir le sujet du message que vous souhaitez envoyer."
 #: ./skins/captcha_contact_info/contact-info.cpt:159
 msgid "label_captcha"
 msgstr "Protection anti-spam"
+
+#. Default: "Click here to read our Privacy Policy related to the use of your personal data."
+#: ./skins/captcha_contact_info/contact-info.cpt:181
+msgid "policy_link"
+msgstr "Cliquez ici pour consulter notre Politique de Confidentialité relative au traitement de vos données."
