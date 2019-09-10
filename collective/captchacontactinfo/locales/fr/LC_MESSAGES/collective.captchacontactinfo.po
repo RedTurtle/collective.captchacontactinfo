@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"PO-Revision-Date: 2014-05-06 11:41+0000\n"
+"Last-Translator: Laurent Lasudry <laurent.lasudry@affinitic.be>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language-Code: fr\n"
+"Language-Name: French\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.captchacontactinfo\n"
+"X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
+
+#: ./profiles/default/controlpanel.xml
+msgid "Captcha Contact Info"
+msgstr "Formulaire de contact avec Captcha"
+
+#: ./configure.zcml:23
+msgid "Captcha contact-info"
+msgstr ""
+
+#: ./skins/captcha_contact_info/validate_site_feedback.vpy:32
+msgid "Captcha not configured"
+msgstr "Captcha non configuré"
+
+#: ./browser/configlet.py:50
+msgid "Contact-info Configuration"
+msgstr "Configuration du formulaire de contact avec Captcha"
+
+#: ./browser/configlet.py:52
+msgid "Contact-info settings"
+msgstr "Paramètres du formulaire"
+
+#: ./configure.zcml:23
+msgid "Installs the collective.captchacontactinfo package"
+msgstr "Installe collective.captchacontactinfo"
+
+#: ./skins/captcha_contact_info/validate_site_feedback.vpy:40
+msgid "Please correct the indicated errors."
+msgstr ""
+
+#: ./skins/captcha_contact_info/validate_site_feedback.vpy:26
+msgid "Please enter a message"
+msgstr ""
+
+#: ./skins/captcha_contact_info/validate_site_feedback.vpy:23
+msgid "Please enter a subject."
+msgstr ""
+
+#: ./skins/captcha_contact_info/validate_site_feedback.vpy:15
+msgid "Please submit an email address."
+msgstr ""
+
+#: ./skins/captcha_contact_info/validate_site_feedback.vpy:20
+msgid "You entered an invalid email address."
+msgstr ""
+
+#. Default: "Policy page"
+#: ./browser/configlet.py:11
+msgid "contactinfo-config-policy"
+msgstr "Politique de confidentialité"
+
+#. Default: "Insert the path for the Page used for Policy text. For example: folder-a/policy-page"
+#: ./browser/configlet.py:13
+msgid "contactinfo-config-policyhelp"
+msgstr "Renseignez le chemain de la page à utiliser pour le texte de Politique de confidentialité. Par exemple: dossier-a/confidentialité"
+
+#. Default: "Copy the words you see in the image below in the propert field. This step is needed for protect this form by spam and improper use."
+#: ./skins/captcha_contact_info/contact-info.cpt:167
+msgid "help_captcha"
+msgstr "Copiez dans le champ les mots que vous voyez dans l'image ci-dessous. Cette étape est nécessaire pour protéger ce formulaire contre les spams et les usages abusifs."
+
+#. Default: "Please enter the subject of the message you want to send."
+#: ./skins/captcha_contact_info/contact-info.cpt:117
+msgid "help_subject"
+msgstr "Veuillez saisir le sujet du message que vous souhaitez envoyer."
+
+#. Default: "Spam protection"
+#: ./skins/captcha_contact_info/contact-info.cpt:159
+msgid "label_captcha"
+msgstr "Protection anti-spam"
