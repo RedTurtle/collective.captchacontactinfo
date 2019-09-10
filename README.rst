@@ -24,6 +24,16 @@ then set his path in a property in ZMI: portal_properties/captchacontactinfo_pro
 http://path/to/site/@@contact-info-controlpanel
 The title of the page will be shown in the form before the text.
 
+Translations
+============
+
+This product has been translated into
+
+- English
+- German
+- Italian
+- French
+
 Dependencies
 ============
 
