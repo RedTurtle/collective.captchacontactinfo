@@ -4,6 +4,9 @@ Changelog
 1.2.2 (unreleased)
 ------------------
 
+- Remove instructions to copy reCaptcha words, as v1 is now shutted down
+  [laulaz]
+
 - Allow to use a browser view instead of a Plone content
   This is useful in multilingual website or for other special cases
   [laulaz]

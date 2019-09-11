@@ -75,11 +75,6 @@ msgstr ""
 msgid "contactinfo-config-policyhelp"
 msgstr ""
 
-#. Default: "Copy the words you see in the image below in the propert field. This step is needed for protect this form by spam and improper use."
-#: ./skins/captcha_contact_info/contact-info.cpt:167
-msgid "help_captcha"
-msgstr ""
-
 #. Default: "Please enter the subject of the message you want to send."
 #: ./skins/captcha_contact_info/contact-info.cpt:117
 msgid "help_subject"

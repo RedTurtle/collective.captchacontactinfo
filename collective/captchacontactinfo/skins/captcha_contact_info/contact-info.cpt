@@ -164,12 +164,6 @@
             <span class="fieldRequired" title="Required"
                   i18n:attributes="title email_required;"
                   i18n:translate="label_required">(Required)</span>
-            <div class="formHelp"
-                   i18n:domain="collective.captchacontactinfo"
-                   i18n:translate="help_captcha">
-                Copy the words you see in the image below in the propert field.
-                This step is needed for protect this form by spam and improper use.
-            </div>
             <tal:block tal:replace="structure context/@@captcha/image_tag"
                        tal:on-error="structure string:&lt;strong&gt;CAPTCHA NOT CONFIGURED&lt;/strong&gt;"
                        />
