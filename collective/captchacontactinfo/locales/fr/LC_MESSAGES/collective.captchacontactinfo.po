@@ -1,25 +1,23 @@
-# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-# SOME DESCRIPTIVE TITLE.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: Eggert Ehmke <eggert@eehmke.de>\n"
-"Language-Team: LANGUAGE <DE@de.org>\n"
+"PO-Revision-Date: 2014-05-06 11:41+0000\n"
+"Last-Translator: Laurent Lasudry <laurent.lasudry@affinitic.be>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: de\n"
-"Language-Name: Deutsch\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language-Code: fr\n"
+"Language-Name: French\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.captchacontactinfo\n"
+"X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
 
 #: ./profiles/default/controlpanel.xml
 msgid "Captcha Contact Info"
-msgstr ""
+msgstr "Formulaire de contact avec Captcha"
 
 #: ./configure.zcml:23
 msgid "Captcha contact-info"
@@ -27,61 +25,61 @@ msgstr ""
 
 #: ./skins/captcha_contact_info/validate_site_feedback.vpy:32
 msgid "Captcha not configured"
-msgstr "Captcha nicht eingerichtet"
+msgstr "Captcha non configuré"
 
 #: ./browser/configlet.py:50
 msgid "Contact-info Configuration"
-msgstr "Contact-Info einrichten"
+msgstr "Configuration du formulaire de contact avec Captcha"
 
 #: ./browser/configlet.py:52
 msgid "Contact-info settings"
-msgstr "Contact-Info Einstellungen"
+msgstr "Paramètres du formulaire"
 
 #: ./configure.zcml:23
 msgid "Installs the collective.captchacontactinfo package"
-msgstr ""
+msgstr "Installe collective.captchacontactinfo"
 
 #: ./skins/captcha_contact_info/validate_site_feedback.vpy:40
 msgid "Please correct the indicated errors."
-msgstr "Bitte korrigieren Sie die angezeigten Fehler"
+msgstr ""
 
 #: ./skins/captcha_contact_info/validate_site_feedback.vpy:26
 msgid "Please enter a message"
-msgstr "Bitte eine Nachricht eingeben"
+msgstr ""
 
 #: ./skins/captcha_contact_info/validate_site_feedback.vpy:23
 msgid "Please enter a subject."
-msgstr "Bitte einen Betreff eingeben"
+msgstr ""
 
 #: ./skins/captcha_contact_info/validate_site_feedback.vpy:15
 msgid "Please submit an email address."
-msgstr "Bitte geben Sie eine E-Mail Adresse ein"
+msgstr ""
 
 #: ./skins/captcha_contact_info/validate_site_feedback.vpy:20
 msgid "You entered an invalid email address."
-msgstr "Sie haben eine ungültige E-Mail Adresse eingegeben"
+msgstr ""
 
 #. Default: "Policy page"
 #: ./browser/configlet.py:11
 msgid "contactinfo-config-policy"
-msgstr "Erklärung"
+msgstr "Politique de confidentialité"
 
 #. Default: "Insert the path for the Page used for Policy text. For example: folder-a/policy-page"
 #: ./browser/configlet.py:13
 msgid "contactinfo-config-policyhelp"
-msgstr "Geben Sie den Pfad zu Ihrer Erklärung ein. Zum Beispiel: ordner/policy-page"
+msgstr "Renseignez le chemain de la page à utiliser pour le texte de Politique de confidentialité. Par exemple: dossier-a/confidentialité"
 
 #. Default: "Please enter the subject of the message you want to send."
 #: ./skins/captcha_contact_info/contact-info.cpt:117
 msgid "help_subject"
-msgstr "Bitte geben Sie den Betreff der Nachricht ein"
+msgstr "Veuillez saisir le sujet du message que vous souhaitez envoyer."
 
 #. Default: "Spam protection"
 #: ./skins/captcha_contact_info/contact-info.cpt:159
 msgid "label_captcha"
-msgstr "Spamschutz"
+msgstr "Protection anti-spam"
 
 #. Default: "Click here to read our Privacy Policy related to the use of your personal data."
 #: ./skins/captcha_contact_info/contact-info.cpt:181
 msgid "policy_link"
-msgstr ""
+msgstr "Cliquez ici pour consulter notre Politique de Confidentialité relative au traitement de vos données."
