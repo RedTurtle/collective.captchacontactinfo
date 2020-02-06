@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.2.2 (unreleased)
+1.2.2 (2020-02-06)
 ------------------
 
 - Remove instructions to copy reCaptcha words, as v1 is now shutted down
