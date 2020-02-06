@@ -37,6 +37,26 @@ Changelog
 - Plone 5 compatibility. For Plone 4, use 1.x.x branch
   [daniele-andreotti]
 
+
+1.2.2 (2020-02-06)
+------------------
+
+- Remove instructions to copy reCaptcha words, as v1 is now shutted down
+  [laulaz]
+
+- Allow to use a browser view instead of a Plone content
+  This is useful in multilingual website or for other special cases
+  [laulaz]
+
+- Add French translations
+  [laulaz]
+
+- Add basic buildout
+  [laulaz]
+
+- Property sheet will not created twice on reinstall
+  [keul] 
+
 1.2.1 (2014-12-17)
 ------------------
 
