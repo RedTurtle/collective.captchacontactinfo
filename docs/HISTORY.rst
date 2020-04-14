@@ -4,8 +4,8 @@ Changelog
 1.2.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Avoid a bug in multilingual site. Use portal instead of context in view.
+  [boulch]
 
 1.2.2 (2020-02-06)
 ------------------
