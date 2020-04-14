@@ -35,7 +35,7 @@
 
     </div>
     <div tal:condition="email_from_address"
-         tal:define="contact_support_view nocall:context/@@contactinfo-support-view;">
+         tal:define="contact_support_view nocall:portal/@@contactinfo-support-view;">
 
         <p class="documentDescription"
            i18n:translate="description_contact_site_owner">
