@@ -4,7 +4,9 @@ Changelog
 2.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- fix verify captcha message
+- add translation for it lang
+  [eikichi18]
 
 
 2.0.3 (2018-01-30)
