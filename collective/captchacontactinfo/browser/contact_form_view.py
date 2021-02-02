@@ -3,7 +3,6 @@ from Products.CMFPlone.browser.contact_info import ContactForm
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope import schema
 
-# from Products.CMFPlone import PloneMessageFactory as _
 from collective.captchacontactinfo import captchacontactinfoMessageFactory as _
 from Products.CMFPlone.browser.interfaces import IContactForm
 
