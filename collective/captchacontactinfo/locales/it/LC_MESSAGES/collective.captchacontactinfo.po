@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-01-30 11:17+0000\n"
+"POT-Creation-Date: 2021-02-02 09:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,9 +21,21 @@ msgstr ""
 msgid "Captcha Contact Info"
 msgstr ""
 
-#: ./browser/contact_form_view.py:77
+#: ./configure.zcml:21
+msgid "Captcha contact-info"
+msgstr ""
+
+#: ./configure.zcml:21
+msgid "Installs the collective.captchacontactinfo package"
+msgstr ""
+
+#: ./browser/contact_form_view.py:80
 msgid "ReCaptcha validation passed."
 msgstr "Validazione ReCaptcha corretta"
+
+#: ./configure.zcml:29
+msgid "Uninstalls the collective.captchacontactinfo package"
+msgstr ""
 
 #. Default: "Policy page"
 #: ./controlpanel/interfaces.py:11
@@ -53,15 +65,19 @@ msgstr "Contatti"
 #. Default: "Please enter your e-mail address if you want to receive an answer"
 #: ./browser/contact_form_view.py:55
 msgid "help_sender_from_address_customized"
-msgstr "Inserisci il tuo indirizzo di posta elettronica se vuoi ricevere una risposta"
+msgstr ""
 
 #. Default: "Send"
-#: ./browser/contact_form_view.py:60
+#: ./browser/contact_form_view.py:63
 msgid "label_send"
 msgstr ""
+
+#. Default: "The code you entered was wrong, please enter the new one."
+#: ./browser/contact_form_view.py:84
+msgid "not_compile_captcha"
+msgstr "La verifica del captcha non è andata a buon fine."
 
 #. Default: "This site doesn't have a valid email setup, so you cannot use any contact forms."
 #: ./browser/templates/contact-info.pt:28
 msgid "text_no_email_setup"
 msgstr "Prima di procedere occorre impostare la configurazione di Posta del sito"
-
