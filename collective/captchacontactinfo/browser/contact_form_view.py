@@ -3,8 +3,7 @@ from Products.CMFPlone.browser.contact_info import ContactForm
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope import schema
 
-from Products.CMFPlone import PloneMessageFactory as _
-from collective.captchacontactinfo import captchacontactinfoMessageFactory as _C
+from collective.captchacontactinfo import captchacontactinfoMessageFactory as _
 from Products.CMFPlone.browser.interfaces import IContactForm
 
 import logging
@@ -52,7 +51,7 @@ class ContactInfoPolicy(ContactForm):
         fields_objects = z3c.form.field.Fields(fields)
         self.fields['sender_fullname'].field.required = False
         self.fields['sender_from_address'].field.required = False
-        help_message = _C(
+        help_message = _(
             u'help_sender_from_address_customized',
             default=u'Please enter your e-mail address if '
             'you want to receive an answer')
@@ -81,9 +80,11 @@ class ContactInfoPolicy(ContactForm):
 
         else:
             IStatusMessage(self.request).add(
-                self.formErrorsMessage,
-                type=u'The code you entered was wrong, '
-                     'please enter the new one.'
+                _(
+                    'not_compile_captcha',
+                    default=u'The code you entered was wrong, please enter the new one.'
+                ),
+                type='error'
             )
             return
 
