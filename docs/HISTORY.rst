@@ -4,7 +4,8 @@ Changelog
 2.0.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- fix it transaltion
+  [eikichi18]
 
 
 2.0.4 (2021-02-02)

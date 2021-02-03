@@ -65,12 +65,12 @@ msgstr "Contatti"
 #. Default: "Please enter your e-mail address if you want to receive an answer"
 #: ./browser/contact_form_view.py:55
 msgid "help_sender_from_address_customized"
-msgstr ""
+msgstr "Inserisci la tua e-mail se vuoi ricevere una risposta"
 
 #. Default: "Send"
 #: ./browser/contact_form_view.py:63
 msgid "label_send"
-msgstr ""
+msgstr "Invia"
 
 #. Default: "The code you entered was wrong, please enter the new one."
 #: ./browser/contact_form_view.py:84
