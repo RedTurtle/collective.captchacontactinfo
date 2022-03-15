@@ -4,7 +4,8 @@ Changelog
 2.0.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Do not open contact-info links in modals anymore.
+  [cekk]
 
 
 2.0.5 (2021-02-03)
