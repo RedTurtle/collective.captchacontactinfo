@@ -21,11 +21,7 @@ log = logging.getLogger(__name__)
 
 class IReCaptchaForm(interface.Interface):
 
-    captcha = schema.TextLine(
-        title=u"ReCaptcha",
-        description=u"",
-        required=False
-    )
+    captcha = schema.TextLine(title=u"ReCaptcha", description=u"", required=False)
 
 
 class ReCaptcha(object):
@@ -38,7 +34,7 @@ class ReCaptcha(object):
 
 class ContactInfoPolicy(ContactForm):
 
-    template = ViewPageTemplateFile('templates/contact-info.pt')
+    template = ViewPageTemplateFile("templates/contact-info.pt")
     schema = IContactForm
     ignoreContext = True
     success = False
@@ -47,44 +43,39 @@ class ContactInfoPolicy(ContactForm):
         super(ContactInfoPolicy, self).updateFields()
 
         fields = field.Fields(IReCaptchaForm)
-        fields['captcha'].widgetFactory = ReCaptchaFieldWidget
+        fields["captcha"].widgetFactory = ReCaptchaFieldWidget
         fields_objects = z3c.form.field.Fields(fields)
-        self.fields['sender_fullname'].field.required = False
-        self.fields['sender_from_address'].field.required = False
+        self.fields["sender_fullname"].field.required = False
+        self.fields["sender_from_address"].field.required = False
         help_message = _(
-            u'help_sender_from_address_customized',
-            default=u'Please enter your e-mail address if '
-            'you want to receive an answer')
-        self.fields['sender_from_address'].field.description = self.context.\
-            translate(help_message)
+            u"help_sender_from_address_customized",
+            default=u"Please enter your e-mail address if "
+            "you want to receive an answer",
+        )
+        self.fields["sender_from_address"].field.description = self.context.translate(
+            help_message
+        )
         self.fields += fields_objects
 
-    @button.buttonAndHandler(_(u'label_send', default='Send'), name='send')
+    @button.buttonAndHandler(_(u"label_send", default="Send"), name="send")
     def handle_send(self, action):
         data, errors = self.extractData()
         if errors:
-            IStatusMessage(self.request).add(
-                self.formErrorsMessage,
-                type=u'error'
-            )
+            IStatusMessage(self.request).add(self.formErrorsMessage, type=u"error")
 
             return
 
         captcha = getMultiAdapter(
-            (aq_inner(self.context), self.request),
-            name='recaptcha'
+            (aq_inner(self.context), self.request), name="recaptcha"
         )
 
-        if captcha.verify():
-            IStatusMessage(self.request).add(_(u'ReCaptcha validation passed.'))
-
-        else:
+        if not captcha.verify():
             IStatusMessage(self.request).add(
                 _(
-                    'not_compile_captcha',
-                    default=u'The code you entered was wrong, please enter the new one.'
+                    "not_compile_captcha",
+                    default=u"The code you entered was wrong, please enter the new one.",
                 ),
-                type='error'
+                type="error",
             )
             return
 
