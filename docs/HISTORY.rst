@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0.6 (unreleased)
+2.1.0 (2022-03-31)
 ------------------
 
 - Do not open contact-info links in modals anymore.
