@@ -9,3 +9,9 @@
 .policyInfo.policyTitle{
     font-weight: bold;
 }
+
+#formfield-form-widgets-sender_phone_number {
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+}

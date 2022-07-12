@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 from Products.CMFPlone.browser.contact_info import ContactForm
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from plone import api
 from zope import schema
 
+from collective.captchacontactinfo.controlpanel.interfaces import ICollectiveCaptchaContactInfoSettings
 from collective.captchacontactinfo import captchacontactinfoMessageFactory as _
 from Products.CMFPlone.browser.interfaces import IContactForm
 
@@ -10,11 +12,13 @@ import logging
 import z3c.form.field
 from Acquisition import aq_inner
 from plone.formwidget.recaptcha.widget import ReCaptchaFieldWidget
+from z3c.form.browser.text import TextFieldWidget
 from z3c.form import button
 from z3c.form import field
-from zope import interface
+from zope import interface, schema
 from zope.component import getMultiAdapter
 from Products.statusmessages.interfaces import IStatusMessage
+
 
 log = logging.getLogger(__name__)
 
@@ -23,7 +27,11 @@ class IReCaptchaForm(interface.Interface):
 
     captcha = schema.TextLine(title=u"ReCaptcha", description=u"", required=False)
 
+class IHoneyPotForm(interface.Interface):
+    """Interface defines honeypot fields"""
 
+    sender_phone_number = schema.TextLine(title=u"Phone number", description=u"Phone number of sender", required=False)
+    
 class ReCaptcha(object):
     subject = u""
     captcha = u""
@@ -38,12 +46,27 @@ class ContactInfoPolicy(ContactForm):
     schema = IContactForm
     ignoreContext = True
     success = False
+    
+    def __init__(self, *args, **kwargs):
+        super(ContactInfoPolicy, self).__init__(*args, **kwargs)
+
+        self.bot_prevention_tecnique = api.portal.get_registry_record(
+            interface = ICollectiveCaptchaContactInfoSettings,
+            name = 'bot_prevention_tecnique'
+        )
 
     def updateFields(self):
         super(ContactInfoPolicy, self).updateFields()
 
-        fields = field.Fields(IReCaptchaForm)
-        fields["captcha"].widgetFactory = ReCaptchaFieldWidget
+        if 'reCAPTCHA' in self.bot_prevention_tecnique:
+            fields = field.Fields(IReCaptchaForm)
+            fields["captcha"].widgetFactory = ReCaptchaFieldWidget
+
+        # default bahavior is Honeypot
+        else:
+            fields = field.Fields(IHoneyPotForm)
+
+
         fields_objects = z3c.form.field.Fields(fields)
         self.fields["sender_fullname"].field.required = False
         self.fields["sender_from_address"].field.required = False
@@ -65,19 +88,25 @@ class ContactInfoPolicy(ContactForm):
 
             return
 
-        captcha = getMultiAdapter(
-            (aq_inner(self.context), self.request), name="recaptcha"
-        )
-
-        if not captcha.verify():
-            IStatusMessage(self.request).add(
-                _(
-                    "not_compile_captcha",
-                    default=u"The code you entered was wrong, please enter the new one.",
-                ),
-                type="error",
+        if 'reCAPTHCHA' in self.bot_prevention_tecnique:
+            captcha = getMultiAdapter(
+                (aq_inner(self.context), self.request), name="recaptcha"
             )
-            return
+
+            if not captcha.verify():
+                IStatusMessage(self.request).add(
+                    _(
+                        "not_compile_captcha",
+                        default=u"The code you entered was wrong, please enter the new one.",
+                    ),
+                    type="error",
+                )
+                return
+
+        # check if Honeypot was compiled by bot
+        else:
+            if data['sender_phone_number']:
+                return
 
         self.send_message(data)
         self.send_feedback()
