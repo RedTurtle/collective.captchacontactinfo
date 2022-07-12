@@ -13,3 +13,8 @@ class ICollectiveCaptchaContactInfoSettings(Interface):
                                 description=_("contactinfo-config-policyhelp",
                                               default=u"Insert the path for the Page used for Policy text. For example: folder-a/policy-page"),
                                 required=False)
+
+    bot_prevention_tecnique = schema.Set(
+            title=_(u"Bot prevention tecnique"),
+            value_type=schema.Choice(values=[_(u'reCAPTCHA'), _(u'Honeypot')]),
+            required=True)
