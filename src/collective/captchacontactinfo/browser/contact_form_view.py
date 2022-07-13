@@ -12,7 +12,6 @@ import logging
 import z3c.form.field
 from Acquisition import aq_inner
 from plone.formwidget.recaptcha.widget import ReCaptchaFieldWidget
-from z3c.form.browser.text import TextFieldWidget
 from z3c.form import button
 from z3c.form import field
 from zope import interface, schema
@@ -30,7 +29,11 @@ class IReCaptchaForm(interface.Interface):
 class IHoneyPotForm(interface.Interface):
     """Interface defines honeypot fields"""
 
-    confirm_email = schema.TextLine(title=u"Confirm email", description=u"Confirm your email", required=False)
+    confirm_email = schema.TextLine(
+        title=_(u"Confirm email"),
+        description=_(u"Confirm your email"),
+        required=False
+        )
     
 class ReCaptcha(object):
     subject = u""
@@ -41,7 +44,6 @@ class ReCaptcha(object):
 
 
 class ContactInfoPolicy(ContactForm):
-
     template = ViewPageTemplateFile("templates/contact-info.pt")
     schema = IContactForm
     ignoreContext = True
@@ -57,7 +59,6 @@ class ContactInfoPolicy(ContactForm):
 
     def updateFields(self):
         super(ContactInfoPolicy, self).updateFields()
-
         if 'recaptcha' == self.bot_prevention_tecnique:
             fields = field.Fields(IReCaptchaForm)
             fields["captcha"].widgetFactory = ReCaptchaFieldWidget
@@ -109,7 +110,7 @@ class ContactInfoPolicy(ContactForm):
                 IStatusMessage(self.request).add(
                     _(
                         "bad_field_value",
-                        default=u"Il valore immesso non è corretto. Se il problema persiste, contattare l'amministratore del sito",
+                        default=_(u"The value is not correct. If the problem persists, please contact the site administrator"),
                     ),
                     type="error",
                 )

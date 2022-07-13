@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-02-02 09:30+0000\n"
+"POT-Creation-Date: 2022-07-13 12:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,67 +17,88 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.captchacontactinfo\n"
 
-#: ./profiles/default/controlpanel.xml
+#: collective/captchacontactinfo/controlpanel/interfaces.py:29
+msgid "Bot prevention tecnique"
+msgstr "Tecnica di prevenzione dei bot"
+
+#: collective/captchacontactinfo/profiles/default/controlpanel.xml
 msgid "Captcha Contact Info"
 msgstr ""
 
-#: ./configure.zcml:21
+#: collective/captchacontactinfo/configure.zcml:22
 msgid "Captcha contact-info"
 msgstr ""
 
-#: ./configure.zcml:21
+#: collective/captchacontactinfo/browser/contact_form_view.py:34
+msgid "Confirm email"
+msgstr "Conferma il tuo email"
+
+#: collective/captchacontactinfo/browser/contact_form_view.py:35
+msgid "Confirm your email"
+msgstr "Conferma il tuo email"
+
+#: collective/captchacontactinfo/controlpanel/interfaces.py:13
+msgid "Honeypot"
+msgstr ""
+
+#: collective/captchacontactinfo/configure.zcml:22
 msgid "Installs the collective.captchacontactinfo package"
 msgstr ""
 
-#: ./browser/contact_form_view.py:80
-msgid "ReCaptcha validation passed."
-msgstr "Validazione ReCaptcha corretta"
-
-#: ./configure.zcml:29
+#: collective/captchacontactinfo/configure.zcml:30
 msgid "Uninstalls the collective.captchacontactinfo package"
 msgstr ""
 
+#. Default: "The value is not correct. If the problem persists, please contact the site administrator"
+#: collective/captchacontactinfo/browser/contact_form_view.py:114
+msgid "bad_field_value"
+msgstr "Il valore immesso non è corretto. Se il problema persiste, contattare l'amministratore del sito"
+
 #. Default: "Policy page"
-#: ./controlpanel/interfaces.py:11
+#: collective/captchacontactinfo/controlpanel/interfaces.py:22
 msgid "contactinfo-config-policy"
 msgstr "Pagina per l'informativa sulla privacy"
 
 #. Default: "Insert the path for the Page used for Policy text. For example: folder-a/policy-page"
-#: ./controlpanel/interfaces.py:13
+#: collective/captchacontactinfo/controlpanel/interfaces.py:24
 msgid "contactinfo-config-policyhelp"
 msgstr "Inserisci il percorso della pagina usata per l'informativa sulla privacy. Per esempio: folder-a/policy-page"
 
 #. Default: "Fill in this form to contact the site owners."
-#: ./browser/templates/contact-info.pt:36
+#: collective/captchacontactinfo/browser/templates/contact-info.pt:36
 msgid "description_contact_site_owner"
 msgstr "Compila questo form per contattare i gestori del sito"
 
 #. Default: "Thank you for your feedback"
-#: ./browser/templates/contact-info.pt:46
+#: collective/captchacontactinfo/browser/templates/contact-info.pt:46
 msgid "description_contact_site_owner_success"
 msgstr "Grazie per il tuo feedback"
 
 #. Default: "Contact form"
-#: ./browser/templates/contact-info.pt:22
+#: collective/captchacontactinfo/browser/templates/contact-info.pt:22
 msgid "heading_contact_form"
 msgstr "Contatti"
 
 #. Default: "Please enter your e-mail address if you want to receive an answer"
-#: ./browser/contact_form_view.py:55
+#: collective/captchacontactinfo/browser/contact_form_view.py:77
 msgid "help_sender_from_address_customized"
 msgstr "Inserisci la tua e-mail se vuoi ricevere una risposta"
 
 #. Default: "Send"
-#: ./browser/contact_form_view.py:63
+#: collective/captchacontactinfo/browser/contact_form_view.py:87
 msgid "label_send"
 msgstr "Invia"
 
 #. Default: "The code you entered was wrong, please enter the new one."
-#: ./browser/contact_form_view.py:84
+#: collective/captchacontactinfo/browser/contact_form_view.py:102
 msgid "not_compile_captcha"
 msgstr "La verifica del captcha non è andata a buon fine."
 
+#: collective/captchacontactinfo/controlpanel/interfaces.py:12
+msgid "reCAPTCHA"
+msgstr ""
+
 #. Default: "This site doesn't have a valid email setup, so you cannot use any contact forms."
-#: ./browser/templates/contact-info.pt:28
+#: collective/captchacontactinfo/browser/templates/contact-info.pt:28
 msgid "text_no_email_setup"
 msgstr "Prima di procedere occorre impostare la configurazione di Posta del sito"
