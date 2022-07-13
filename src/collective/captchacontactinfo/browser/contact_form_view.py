@@ -30,7 +30,7 @@ class IReCaptchaForm(interface.Interface):
 class IHoneyPotForm(interface.Interface):
     """Interface defines honeypot fields"""
 
-    sender_phone_number = schema.TextLine(title=u"Phone number", description=u"Phone number of sender", required=False)
+    confirm_email = schema.TextLine(title=u"Confirm email", description=u"Confirm your email", required=False)
     
 class ReCaptcha(object):
     subject = u""
@@ -58,7 +58,7 @@ class ContactInfoPolicy(ContactForm):
     def updateFields(self):
         super(ContactInfoPolicy, self).updateFields()
 
-        if 'reCAPTCHA' in self.bot_prevention_tecnique:
+        if 'recaptcha' == self.bot_prevention_tecnique:
             fields = field.Fields(IReCaptchaForm)
             fields["captcha"].widgetFactory = ReCaptchaFieldWidget
 
@@ -88,7 +88,7 @@ class ContactInfoPolicy(ContactForm):
 
             return
 
-        if 'reCAPTHCHA' in self.bot_prevention_tecnique:
+        if 'recaptcha' == self.bot_prevention_tecnique:
             captcha = getMultiAdapter(
                 (aq_inner(self.context), self.request), name="recaptcha"
             )
@@ -105,7 +105,14 @@ class ContactInfoPolicy(ContactForm):
 
         # check if Honeypot was compiled by bot
         else:
-            if data['sender_phone_number']:
+            if data['confirm_email']:
+                IStatusMessage(self.request).add(
+                    _(
+                        "bad_field_value",
+                        default=u"Il valore immesso non è corretto. Se il problema persiste, contattare l'amministratore del sito",
+                    ),
+                    type="error",
+                )
                 return
 
         self.send_message(data)

@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    >
+
+    <genericsetup:upgradeStep
+      title="Upgrade to 1001"
+      description=""
+      profile="collective.captchacontactinfo:default"
+      source="1000"
+      destination="1001"
+      handler=".upgrades.to_1001"
+      />
+
+</configure>
