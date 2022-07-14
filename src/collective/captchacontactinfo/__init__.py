@@ -2,4 +2,4 @@
 
 from zope.i18nmessageid import MessageFactory
 
-captchacontactinfoMessageFactory = MessageFactory('collective.captchacontactinfo')
+captchacontactinfoMessageFactory = MessageFactory("collective.captchacontactinfo")
