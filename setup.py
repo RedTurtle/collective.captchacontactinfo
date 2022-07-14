@@ -3,13 +3,7 @@
 
 from setuptools import find_packages, setup
 
-long_description = "\n\n".join(
-    [
-        open("README.rst").read(),
-        open("CONTRIBUTORS.rst").read(),
-        open("CHANGES.rst").read(),
-    ]
-)
+long_description = "\n\n".join([open("README.rst").read()])
 
 
 setup(

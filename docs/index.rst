@@ -1,5 +1,0 @@
-=============================
-collective.captchacontactinfo
-=============================
-
-User documentation

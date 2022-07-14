@@ -24,6 +24,16 @@ then set his path in a property in ZMI: portal_properties/captchacontactinfo_pro
 http://path/to/site/@@contact-info-controlpanel
 The title of the page will be shown in the form before the text.
 
+Dependencies
+============
+
+From version 2.0.0 this product is compatible only for Plone 5.
+
+1.x.x versions still works on Plone 3.3.5 and Plone 4.
+
+From version honeypot_setting compatible with Plone 5.2/6.0 and python3.8/3.9
+
+
 Credits
 =======
 
