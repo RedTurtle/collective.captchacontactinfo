@@ -2,7 +2,6 @@
 from Products.CMFPlone.browser.contact_info import ContactForm
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone import api
-from zope import schema
 
 from collective.captchacontactinfo.controlpanel.interfaces import (
     ICollectiveCaptchaContactInfoSettings,

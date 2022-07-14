@@ -1,10 +1,11 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:five="http://namespaces.zope.org/five"
-    xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:five="http://namespaces.zope.org/five"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-    i18n_domain="collective.captchacontactinfo">
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="collective.captchacontactinfo"
+    >
 
   <include package=".browser" />
   <include package=".controlpanel" />
@@ -16,17 +17,17 @@
   <genericsetup:registerProfile
       name="default"
       title="Captcha contact-info"
-      directory="profiles/default"
       description="Installs the collective.captchacontactinfo package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/default"
       />
 
   <genericsetup:registerProfile
       name="uninstall"
       title="Captcha contact-info"
-      directory="profiles/uninstall"
       description="Uninstalls the collective.captchacontactinfo package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/uninstall"
       />
 
   <genericsetup:importStep

@@ -1,4 +1,3 @@
-from cmath import e
 from plone import api
 from collective.captchacontactinfo.controlpanel.interfaces import (
     ICollectiveCaptchaContactInfoSettings,
@@ -38,7 +37,7 @@ def to_1001(context):
             value="honeypot",
             interface=ICollectiveCaptchaContactInfoSettings,
         )
-    except:
+    except Exception:
         logger.warning("Couldn't write to registry")
         return
 

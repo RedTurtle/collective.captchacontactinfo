@@ -3,7 +3,7 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     >
 
-    <genericsetup:upgradeStep
+  <genericsetup:upgradeStep
       title="Upgrade to 1001"
       description=""
       profile="collective.captchacontactinfo:default"

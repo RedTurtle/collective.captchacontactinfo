@@ -15,10 +15,11 @@ long_description = "\n\n".join(
 setup(
     name="collective.captchacontactinfo",
     version="1.0a1",
-    description="desc",
+    description="A simple customization for Plone contact-info that add recaptcha for anonymous users",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
     classifiers=[
+        "Development Status :: 5 - Production/Stable",
         "Environment :: Web Environment",
         "Framework :: Plone",
         "Framework :: Plone :: Addon",

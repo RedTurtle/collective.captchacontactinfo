@@ -1,111 +1,42 @@
-.. This README is meant for consumption by humans and pypi. Pypi can render rst files so please do not use Sphinx features.
-   If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
-   This text does not appear on pypi or github. It is a comment.
+Introduction
+============
 
-.. image:: https://github.com/collective/collective.captchacontactinfo/actions/workflows/plone-package.yml/badge.svg
-    :target: https://github.com/collective/collective.captchacontactinfo/actions/workflows/plone-package.yml
+A simple Plone customization for the "*Contact form*" form that add a captcha regognition for anonymous users.
 
-.. image:: https://coveralls.io/repos/github/collective/collective.captchacontactinfo/badge.svg?branch=main
-    :target: https://coveralls.io/github/collective/collective.captchacontactinfo?branch=main
-    :alt: Coveralls
+When anonymous try to use contact-info form, they *must* provide also a captcha protection
+value.
 
-.. image:: https://codecov.io/gh/collective/collective.captchacontactinfo/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/collective/collective.captchacontactinfo
+Form protection
+===============
 
-.. image:: https://img.shields.io/pypi/v/collective.captchacontactinfo.svg
-    :target: https://pypi.python.org/pypi/collective.captchacontactinfo/
-    :alt: Latest Version
+The captcha protection is given by `collective.recaptcha`__ product.
 
-.. image:: https://img.shields.io/pypi/status/collective.captchacontactinfo.svg
-    :target: https://pypi.python.org/pypi/collective.captchacontactinfo
-    :alt: Egg Status
+__ http://pypi.python.org/pypi/collective.recaptcha
 
-.. image:: https://img.shields.io/pypi/pyversions/collective.captchacontactinfo.svg?style=plastic   :alt: Supported - Python Versions
+After installing this package, you must obtain a public and private key from
+`http://recaptcha.net <http://recaptcha.net>`_, and configure them at http://path/to/site/@@recaptcha-settings
 
-.. image:: https://img.shields.io/pypi/l/collective.captchacontactinfo.svg
-    :target: https://pypi.python.org/pypi/collective.captchacontactinfo/
-    :alt: License
+Policy text
+===========
 
+To show a policy text in contact-form, you just need to write it into a page in the portal, and
+then set his path in a property in ZMI: portal_properties/captchacontactinfo_properties or in plone-control-panel:
+http://path/to/site/@@contact-info-controlpanel
+The title of the page will be shown in the form before the text.
 
-=============================
-collective.captchacontactinfo
-=============================
+Credits
+=======
 
-An add-on for Plone
+Developed with the support of `Regione Emilia Romagna`__; Regione Emilia Romagna supports the `PloneGov initiative`__.
 
-Features
---------
-
-- Can be bullet points
-
-
-Examples
---------
-
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
-
-
-Documentation
--------------
-
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
-
-
-Translations
-------------
-
-This product has been translated into
-
-- Klingon (thanks, K'Plai)
-
-
-Installation
-------------
-
-Install collective.captchacontactinfo by adding it to your buildout::
-
-    [buildout]
-
-    ...
-
-    eggs =
-        collective.captchacontactinfo
-
-
-and then running ``bin/buildout``
-
+__ http://www.regione.emilia-romagna.it/
+__ http://www.plonegov.it/
 
 Authors
--------
+=======
 
-Provided by awesome people ;)
+This product was developed by RedTurtle Technology team.
 
-
-Contributors
-------------
-
-Put your name here, you deserve it!
-
-- ?
-
-
-Contribute
-----------
-
-- Issue Tracker: https://github.com/collective/collective.captchacontactinfo/issues
-- Source Code: https://github.com/collective/collective.captchacontactinfo
-- Documentation: https://docs.plone.org/foo/bar
-
-
-Support
--------
-
-If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
-
-
-License
--------
-
-The project is licensed under the GPLv2.
+.. image:: http://www.redturtle.it/redturtle_banner.png
+   :alt: RedTurtle Technology Site
+   :target: http://www.redturtle.it/

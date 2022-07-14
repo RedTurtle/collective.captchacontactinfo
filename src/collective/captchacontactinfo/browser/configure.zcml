@@ -1,24 +1,25 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:five="http://namespaces.zope.org/five"
     xmlns:browser="http://namespaces.zope.org/browser"
-    i18n_domain="collective.captchacontactinfo">
+    xmlns:five="http://namespaces.zope.org/five"
+    i18n_domain="collective.captchacontactinfo"
+    >
 
-    <include package=".ajax" />
+  <include package=".ajax" />
 
-    <browser:page
-          name="contact-info"
-          for="*"
-          class=".contact_form_view.ContactInfoPolicy"
-          permission="zope.Public"
-          layer="collective.captchacontactinfo.interfaces.ICollectiveCaptchaContactInfoLayer"
-          />
+  <browser:page
+      name="contact-info"
+      for="*"
+      class=".contact_form_view.ContactInfoPolicy"
+      permission="zope.Public"
+      layer="collective.captchacontactinfo.interfaces.ICollectiveCaptchaContactInfoLayer"
+      />
 
 
-      <!-- Publish static files -->
-    <browser:resourceDirectory
-        name="collective.captchacontactinfo"
-        directory="static"
-        />
+  <!-- Publish static files -->
+  <browser:resourceDirectory
+      name="collective.captchacontactinfo"
+      directory="static"
+      />
 
 </configure>
