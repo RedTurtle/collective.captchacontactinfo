@@ -4,8 +4,8 @@ Changelog
 2.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Add managing of bot prevention tecnique: honeypot/recaptcha
+  [foxtrot-dfm1]
 
 2.1.0 (2022-03-31)
 ------------------
