@@ -25,14 +25,14 @@ log = logging.getLogger(__name__)
 
 class IReCaptchaForm(interface.Interface):
 
-    captcha = schema.TextLine(title="ReCaptcha", description="", required=False)
+    captcha = schema.TextLine(title=u"ReCaptcha", description=u"", required=False)
 
 
 class IHoneyPotForm(interface.Interface):
     """Interface defines honeypot fields"""
 
     confirm_email = schema.TextLine(
-        title=_("Confirm email"), description=_("Confirm your email"), required=False
+        title=_(u"Confirm email"), description=_(u"Confirm your email"), required=False
     )
 
 
