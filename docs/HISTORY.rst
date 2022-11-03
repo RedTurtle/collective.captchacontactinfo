@@ -4,7 +4,8 @@ Changelog
 2.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Drop recaptcha dependency: use collective.honeypot.
+  [cekk]
 
 
 2.1.0 (2022-03-31)

@@ -9,12 +9,10 @@ value.
 Form protection
 ===============
 
-The captcha protection is given by `collective.recaptcha`__ product.
+The form protection is given by `collective.honeypot`__ product.
 
-__ http://pypi.python.org/pypi/collective.recaptcha
+__ http://pypi.python.org/pypi/collective.honeypot
 
-After installing this package, you must obtain a public and private key from
-`http://recaptcha.net <http://recaptcha.net>`_, and configure them at http://path/to/site/@@recaptcha-settings
 
 Policy text
 ===========

@@ -29,10 +29,6 @@ msgstr ""
 msgid "Installs the collective.captchacontactinfo package"
 msgstr ""
 
-#: ./browser/contact_form_view.py:80
-msgid "ReCaptcha validation passed."
-msgstr "Validazione ReCaptcha corretta"
-
 #: ./configure.zcml:29
 msgid "Uninstalls the collective.captchacontactinfo package"
 msgstr ""
