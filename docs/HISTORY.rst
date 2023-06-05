@@ -6,7 +6,8 @@ Changelog
 
 - Force focus on statusMessage after a form submission.
   [cekk]
-
+- Fix bundle last_compilation configuration.
+  [cekk]
 
 3.0.0 (2022-11-03)
 ------------------
