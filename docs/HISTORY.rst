@@ -4,7 +4,8 @@ Changelog
 3.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Force focus on statusMessage after a form submission.
+  [cekk]
 
 
 3.0.0 (2022-11-03)

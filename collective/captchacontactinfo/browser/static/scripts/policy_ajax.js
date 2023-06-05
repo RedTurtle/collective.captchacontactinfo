@@ -1,6 +1,14 @@
 require(["jquery", "mockup-patterns-modal"], function ($, Modal) {
   "use strict";
   $(document).ready(function () {
+    if (
+      $(".portalMessage.error").length > 0 ||
+      $(".portalMessage.info").length > 0
+    ) {
+      $(".portalMessage").attr("tabindex", -1);
+      $(".portalMessage").focus();
+    }
+
     var myvet = $(location.pathname.split("/"));
     var mylocation = $(location.pathname.split("/"))[myvet.length - 1];
 
