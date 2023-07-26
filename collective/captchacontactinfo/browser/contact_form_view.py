@@ -1,12 +1,7 @@
 # -*- coding: utf-8 -*-
-from Acquisition import aq_inner
 from collective.captchacontactinfo import captchacontactinfoMessageFactory as _
 from Products.CMFPlone.browser.contact_info import ContactForm
-from Products.CMFPlone.browser.interfaces import IContactForm
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from Products.statusmessages.interfaces import IStatusMessage
-from z3c.form import button
-from zope.component import getMultiAdapter
 import zope.schema
 import z3c.form.field
 from z3c.form.interfaces import HIDDEN_MODE
@@ -48,17 +43,3 @@ class ContactInfoPolicy(ContactForm):
             self.request.environ.get("HTTP_REFERER")
         )
         self.fields["starting_url"].mode = HIDDEN_MODE
-
-    def generate_mail(self, variables, encoding=None):
-        template = self.context.restrictedTraverse(self.template_mailview)
-        result = template(self.context, **variables)
-        if encoding is not None:
-            # Maybe someone has customized 'send_message'
-            # and still expects to get an encoded answer back.
-            warnings.warn(
-                "Calling generate_mail with an encoding argument is deprecated. "
-                "You can leave it out, and get text (string) as result.",
-                DeprecationWarning,
-            )
-            result = result.encode(encoding)
-        return result
