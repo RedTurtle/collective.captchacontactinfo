@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-from collective.captchacontactinfo import captchacontactinfoMessageFactory as _
+
+
 from Products.CMFPlone.browser.contact_info import ContactForm
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-import zope.schema
-import z3c.form.field
+from collective.captchacontactinfo import captchacontactinfoMessageFactory as _
 from z3c.form.interfaces import HIDDEN_MODE
-
-
 import logging
 import warnings
+import z3c.form.field
+import zope.schema
 
 log = logging.getLogger(__name__)
 
