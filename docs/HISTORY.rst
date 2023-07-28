@@ -4,7 +4,8 @@ Changelog
 3.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Added original URL to contact-info form (#27527)
+  [daniele]
 
 
 3.0.0 (2022-11-03)
